@@ -4,7 +4,11 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "dev": "node ./app.js"
+    "start": "node ./app.js",
+    "start:migrate": "prisma migrate deploy && node ./app.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "@prisma/client": "^4.0.0",
